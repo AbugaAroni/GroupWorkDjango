@@ -21,3 +21,4 @@ emergency service? boolean
 
 install image uploader
 conncet to postgrest
+create admin
