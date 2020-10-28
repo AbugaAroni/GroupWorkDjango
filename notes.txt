@@ -17,3 +17,7 @@ Centres
 Centre Name
 contact
 emergency service? boolean
+
+
+install image uploader
+conncet to postgrest
