@@ -1,0 +1,19 @@
+
+Users - set by django.contrib.auth.models
+Type - system administrator, neighbourhood administrator, normal userid
+
+
+Profile
+User - foreign key
+avatar
+Location
+Neighbourhood Name - foreign key
+
+Neighbourhoods
+Neighbourhood Name
+centres forign key, many to many (once neighbourhood canhave many police stations, hospitals)
+
+Centres
+Centre Name
+contact
+emergency service? boolean
