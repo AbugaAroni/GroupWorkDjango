@@ -33,3 +33,17 @@ class Neighbourhood(models.Model):
 
     def delete_Neighbourhood(self):
         self.delete()
+
+class Business_centres(model.Model):
+    centre_name = models.CharField(max_length=20)
+    contact_info = models.CharField(max_length=20)
+    emergency_service = models.booleanfield(default=false)
+
+    def __str__(self):
+        return self.centre_name
+
+    def save_centre(self):
+        self.save()
+
+    def delete_centre(self):
+        self.delete()
