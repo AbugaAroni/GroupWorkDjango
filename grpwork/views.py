@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import NeighbourHood, Profile, Business_centres
+from .models import Neighbourhood, Profile, Business_centres
 from .serializer import ProfileSerializer,NeighbourhoodSerializer,Business_centresSerializers
 # Create your views here.
 @login_required
