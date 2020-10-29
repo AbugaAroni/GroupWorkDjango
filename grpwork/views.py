@@ -1,12 +1,12 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import SignupForm, BusinessForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
-from .models import NeighbourHood, Profile, Business, Post
-from .forms import UpdateProfileForm, NeighbourHoodForm, PostForm
 from django.contrib.auth.models import User
-
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .models import NeighbourHood, Profile, Business_centres
+from .serializer import ProfileSerializer,NeighbourhoodSerializer,Business_centresSerializers
 # Create your views here.
 @login_required
 def index(request):
@@ -128,3 +128,21 @@ def search_business(request):
     else:
         message = "You haven't searched for any image category"
     return render(request, "results.html")
+
+class ProfileList(APIView):
+    def get(self,request,format=None):
+        all_users = Profile.objects.all()
+        serializers = ProfileSerializer(all_users,many=True)
+        return Response(serializers.data)
+
+class NeighbourhoodList(APIView):
+    def get(self,request,format=None):
+        all_users = NeighbourHood.objects.all()
+        serializers = NeighbourhoodSerializer(all_users,many=True)
+        return Response(serializers.data)
+
+class Business_centres(APIView):
+    def get(self,request,format=None):
+        all_users = Business_centres.objects.all()
+        serializers = Business_centresSerializers(all_users,many=True)
+        return Response(serializers.data)
