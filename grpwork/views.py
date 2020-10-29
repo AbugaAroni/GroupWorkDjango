@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import Neighbourhood, Profile, Business_centres
+from .models import Business_centres, Neighbourhood, Profile
 from .serializer import ProfileSerializer,NeighbourhoodSerializer,Business_centresSerializers
 # Create your views here.
 @login_required
@@ -137,11 +137,11 @@ class ProfileList(APIView):
 
 class NeighbourhoodList(APIView):
     def get(self,request,format=None):
-        all_users = NeighbourHood.objects.all()
+        all_users = Neighbourhood.objects.all()
         serializers = NeighbourhoodSerializer(all_users,many=True)
         return Response(serializers.data)
 
-class Business_centres(APIView):
+class Business_centresList(APIView):
     def get(self,request,format=None):
         all_users = Business_centres.objects.all()
         serializers = Business_centresSerializers(all_users,many=True)
