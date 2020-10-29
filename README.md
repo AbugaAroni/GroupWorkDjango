@@ -1,6 +1,6 @@
 # Groupwork / Django week 4 IP
 
-### Authors: [Abuga Aroni] (https://github.com/AbugaAroni/) [TOny Ishangu] (https://github.com/tonyishangu/), [Abzed Mohammed] (https://github.com/Abzed/), [Collins Akumu] (https://github.com/Akumucollins)
+### Authors: [Abuga Aroni] (https://github.com/AbugaAroni/) [Tony Ishangu] (https://github.com/tonyishangu/), [Abzed Mohammed] (https://github.com/Abzed/), [Collins Akumu] (https://github.com/Akumucollins)
 
 ### Description
 This is an application that will display an API as part of a larger groupwork project.
@@ -29,6 +29,6 @@ You will need to install the Dependencies from the requirements.txt file.
 Execute the command "python3.6 manage.py" whilst in the directory in your command line and you will be able to run the program.
 You will need a text editor to edit and view the code.
 
-### Link to the published site: [API application by DjangoGroup] (https://ipawards.herokuapp.com/)
+### Link to the published site: [API application by DjangoGroup] (https://djangogroupwork.herokuapp.com/)
 
 ### License: [MIT] (https://github.com/AbugaAroni/GroupworkDjango/blob/main/LICENSE)
