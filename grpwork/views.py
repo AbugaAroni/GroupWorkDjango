@@ -8,3 +8,6 @@ from .forms import UpdateProfileForm, NeighbourHoodForm, PostForm
 from django.contrib.auth.models import User
 
 # Create your views here.
+@login_required
+def index(request):
+    return render(request, 'index.html')
